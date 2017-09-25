@@ -1,8 +1,11 @@
 .main {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
   text-align: center;
+
+  @media(min-width: @tablet-width) {
+    height: 100vh;
+    min-height: 600px;
+  }
 }
 
 .title {
@@ -11,19 +14,23 @@
 }
 
 .bottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding-bottom: @gutter;
+  @media(min-width: @tablet-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: @gutter;
+  }
 }
 
 .img-row {
-  position: absolute;
-  top: 80px;
-  bottom: 140px;
-  left: 0;
-  right: 0;
+  @media(min-width: @tablet-width) {
+    position: absolute;
+    top: 80px;
+    bottom: 140px;
+    left: 0;
+    right: 0;
+  }
 }
 
 .hero-img {
