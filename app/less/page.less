@@ -1,0 +1,47 @@
+.main {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  text-align: center;
+}
+
+.title {
+  margin-top: 0;
+  padding-top: .67em;
+}
+
+.bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: @gutter;
+}
+
+.img-row {
+  position: absolute;
+  top: 80px;
+  bottom: 140px;
+  left: 0;
+  right: 0;
+}
+
+.hero-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cta {
+  color: @link-color;
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    color: @link-color-hover;
+    text-decoration: none;
+  }
+  &:active {
+    color: @link-color-active;
+  }
+}

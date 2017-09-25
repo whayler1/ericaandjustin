@@ -6,6 +6,10 @@ block meta
 block content
   -
     var img = require('./img/IMG_8234.jpg')
-  h1 Erica and Justin
-  img(src=img)
-  h2 Save the Date 3/31/2017
+  main(role="main").main
+    h1.title Erica &amp; Justin
+    .img-row
+      img(src=img alt="Eric and Justin Worsdale").hero-img
+    .bottom
+      h2.subtitle Save the Date 03•31•2017
+      a(href="http://rsvp.com").cta RSVP
