@@ -1,0 +1,55 @@
+.container-glossary {
+  position: relative;
+}
+
+.aside-glossary {
+  display: none;
+  @media(min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    left: @gutter * 2;
+    top: 0;
+    padding-top: @gutter;
+  }
+}
+
+.section-glossary {
+  @media(min-width: @tablet-width) {
+    margin-left: 100px;
+  }
+}
+
+.aside-glossary-toc-list {
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+
+  >li {
+    padding-top: @quarter-gutter;
+    list-style: none;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    a {
+      transition: padding-left .25s;
+      line-height: 1.1em;
+      color: @silver;
+
+      &:hover,
+      &:focus {
+        color: @silver-dark;
+      }
+      &:active,
+      &.active {
+        color: @black;
+      }
+
+      &.active {
+        padding-left: @half-gutter;
+        border-left: 2px solid @turquoise;
+      }
+    }
+  }
+}
