@@ -1,10 +1,22 @@
-.main {
+.home-main {
   position: relative;
   text-align: center;
+  // background: url('../img/IMG_8234.jpg') center center no-repeat transparent;
+  // background-size: cover;
 
   @media(min-width: @tablet-width) {
     height: 100vh;
     min-height: 600px;
+  }
+}
+
+.main {
+  max-width: @tablet-width;
+  padding: 0 @gutter;
+  margin: 0 auto;
+
+  @media(min-width: @tablet-width) {
+    margin-top: 130px;
   }
 }
 
@@ -20,6 +32,7 @@
 
 .subtitle {
   font-weight: 300;
+  color: @dovegrey;
 }
 
 .img-row {
@@ -36,8 +49,13 @@
 .hero-img {
   max-width: 100%;
   max-height: 100%;
-  border: 3px double #c6ccd3;
-  padding: @half-gutter;
+  margin-top: @gutter;
+
+  @media(min-width: @tablet-width) {
+    margin-top: 0;
+    border: 3px double lighten(@cloudy, 10%);
+    padding: @half-gutter;
+  }
 }
 
 .cta {

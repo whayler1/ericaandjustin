@@ -1,10 +1,13 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
   text-align: center;
+
+  @media(min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
 }
 
 .header-nav-list {
@@ -38,4 +41,28 @@
   margin: 0;
   padding: .67em 0 .3em;
   font-weight: 300;
+  a {
+    color: @dovegrey;
+    text-decoration: none;
+
+    span {
+      &::before {
+        display: inline-block;
+        content: '&'
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: @link-color-hover;
+      span {
+        &::before {
+          content: '\2665'
+        }
+      }
+    }
+    &:active {
+      color: @link-color-active;
+    }
+  }
 }

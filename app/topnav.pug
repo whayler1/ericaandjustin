@@ -5,12 +5,15 @@
       title: 'Location'
     },
     {
-      href: '/accomidations',
-      title: 'Accomidations'
+      href: '/accomodations',
+      title: 'Accomodations'
     }
   ];
 header.header
-  h1.title Erica & Justin
+  h1.title
+    a(href="/") Erica 
+      span
+      |  Justin
   nav
     ul.header-nav-list
       each item in navItems

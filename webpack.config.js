@@ -98,6 +98,18 @@ module.exports = (env) => {
         filename: 'index.html',
         chunks: ['index']
       }),
+      new HtmlWebpackPlugin({
+        title: 'Accomodations',
+        template: './app/accomodations.pug',
+        filename: 'accomodations/index.html',
+        chunks: ['index']
+      }),
+      new HtmlWebpackPlugin({
+        title: 'Location',
+        template: './app/location.pug',
+        filename: 'location/index.html',
+        chunks: ['index']
+      }),
       new FaviconsWebpackPlugin({
         title: 'Erica and Justin',
         logo: './app/img/favicon.png'
