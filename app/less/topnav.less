@@ -1,0 +1,41 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.header-nav-list {
+  margin: 0;
+  padding: 0;
+  >li {
+    display: inline-block;
+    list-style: none;
+    margin-left: @gutter;
+    &:first-child {
+      margin-left: 0;
+    }
+    >a {
+      display: inline-block;
+      color: @link-color;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: @link-color-hover;
+        text-decoration: none;
+      }
+      &:active {
+        color: @link-color-active;
+      }
+    }
+  }
+}
+
+.title {
+  margin: 0;
+  padding: .67em 0 .3em;
+  font-weight: 300;
+}

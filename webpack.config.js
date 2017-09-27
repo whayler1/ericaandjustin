@@ -93,7 +93,7 @@ module.exports = (env) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Erica and Justin',
+        title: 'Erica and Justin are getting married',
         template: './app/index.pug',
         filename: 'index.html',
         chunks: ['index']

@@ -8,11 +8,6 @@
   }
 }
 
-.title {
-  margin-top: 0;
-  padding-top: .67em;
-}
-
 .bottom {
   @media(min-width: @tablet-width) {
     position: absolute;
@@ -23,19 +18,26 @@
   }
 }
 
+.subtitle {
+  font-weight: 300;
+}
+
 .img-row {
   @media(min-width: @tablet-width) {
     position: absolute;
-    top: 80px;
-    bottom: 140px;
-    left: 0;
-    right: 0;
+    margin-top: -@half-gutter;
+    top: 130px;
+    bottom: 160px;
+    left: @gutter;
+    right: @gutter;
   }
 }
 
 .hero-img {
   max-width: 100%;
   max-height: 100%;
+  border: 3px double #c6ccd3;
+  padding: @half-gutter;
 }
 
 .cta {
