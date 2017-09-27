@@ -1,8 +1,6 @@
 .home-main {
   position: relative;
   text-align: center;
-  // background: url('../img/IMG_8234.jpg') center center no-repeat transparent;
-  // background-size: cover;
 
   @media(min-width: @tablet-width) {
     height: 100vh;
@@ -14,6 +12,7 @@
   max-width: @tablet-width;
   padding: 0 @gutter;
   margin: 0 auto;
+  border-top: 1px solid #dfdfdf;
 
   @media(min-width: @tablet-width) {
     margin-top: 130px;
@@ -40,9 +39,11 @@
     position: absolute;
     margin-top: -@half-gutter;
     top: 130px;
-    bottom: 160px;
-    left: @gutter;
-    right: @gutter;
+    bottom: 130px;
+    left: 0;
+    right: 0;
+    background: url('../img/plant_045.jpeg') center center no-repeat transparent;
+    background-size: cover;
   }
 }
 
@@ -53,8 +54,10 @@
 
   @media(min-width: @tablet-width) {
     margin-top: 0;
-    border: 3px double lighten(@cloudy, 10%);
-    padding: @half-gutter;
+    // border: 3px double lighten(@cloudy, 10%);
+    // padding: @half-gutter;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
   }
 }
 
@@ -75,4 +78,8 @@
 
 .vanity-font {
   font-family: 'Great Vibes', cursive;
+}
+
+h1,h2,h3 {
+  font-weight: 300;
 }
