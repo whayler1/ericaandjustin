@@ -5,26 +5,58 @@ block meta
 
 block content
   -
-    var img = require('./img/marriot.jpg')
+    var accomodations = [
+      {
+        title: "Courtyard by Marriott Miami Dadeland",
+        img: require('./img/marriot.jpg'),
+        mapLink: 'https://www.google.com/maps/place/Courtyard+by+Marriott+Miami+Dadeland/@25.6858524,-80.3143186,17z/data=!4m12!1m6!3m5!1s0x88d9c7a5cb1355eb:0x6fc10ab5431c3490!2sCourtyard+by+Marriott+Miami+Dadeland!8m2!3d25.686013!4d-80.314473!3m4!1s0x88d9c7a5cb1355eb:0x6fc10ab5431c3490!8m2!3d25.686013!4d-80.314473?hl=en-US',
+        address: '9075 S Dadeland Blvd, Miami, FL 33156',
+        phone: '3056701220',
+        phoneDisplay: '(305) 670-1220',
+        price: 232,
+        linkDisplay: 'www.marriott.com',
+        link: 'http://www.marriott.com/hotels/travel/miacy-courtyard-miami-dadeland/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2',
+        groupCode: 'RWW'
+      },
+      {
+        title: "Hampton Inn Miami Dadeland",
+        img: require('./img/hampton.jpg'),
+        mapLink: 'https://www.google.com/maps?q=Hampton+Inn+Miami+Dadeland,+8200+SW+70th+Ave,+Miami,+FL+33143&ftid=0x88d9c7bd81355509:0xe712eddf28672fef&hl=en-US&gl=us&shorturl=1',
+        address: '8200 SW 70th Ave, Miami, FL 33143',
+        phone: '3052690072',
+        phoneDisplay: '(305) 269-0072',
+        price: 232,
+        linkDisplay: 'hamptoninn3.hilton.com',
+        link: 'http://hamptoninn3.hilton.com/en/hotels/florida/hampton-inn-miami-dadeland-MIADLHX/index.html',
+        groupCode: 'RWW'
+      }
+    ];
   main(role="main").main
-    h2 Where to Stay
-    p For those coming from out-of-town we have reserved blocks at a few nearby hotels.
-    ul.accomodations-list
-      li
-        section
-          .accomodation-image-wrap
-            img(src=img)
-          h1 Courtyard by Marriott Miami Dadeland
-          ul.accomodation-info-list
-            li
-              a(href="https://www.google.com/maps/place/Courtyard+by+Marriott+Miami+Dadeland/@25.6858524,-80.3143186,17z/data=!4m12!1m6!3m5!1s0x88d9c7a5cb1355eb:0x6fc10ab5431c3490!2sCourtyard+by+Marriott+Miami+Dadeland!8m2!3d25.686013!4d-80.314473!3m4!1s0x88d9c7a5cb1355eb:0x6fc10ab5431c3490!8m2!3d25.686013!4d-80.314473?hl=en-US" target="_blank")
-                i.material-icons location_on
-                span  9075 S Dadeland Blvd, Miami, FL 33156
-            li
-              a(href="tel:3056701220")
-                i.material-icons phone
-                span  (305) 670-1220
-            li
-              span
-                i.material-icons attach_money
-                span 232/night
+    .container
+      h2.center Where to Stay
+      p.center For those coming from out-of-town we have reserved blocks at a few nearby hotels.
+      ul.accomodations-list
+        each item in accomodations
+          li
+            section.accomodation-section
+              a(href=item.link target="_blank").accomodation-image(style=`background-image:url(${item.img})`)
+              .accomodation-content
+                h1.accomodation-title
+                  a(href=item.link target="_blank")= item.title
+                ul.accomodation-info-list
+                  li
+                    a(href=item.mapLink target="_blank")
+                      i.material-icons location_on
+                      span= ` ${item.address}`
+                  li
+                    a(href=item.link target="_blank")
+                      i.material-icons link
+                      span=` ${item.linkDisplay}`
+                  li
+                    a(href=`tel:${item.phone}`)
+                      i.material-icons phone
+                      span=` ${item.phoneDisplay}`
+                  li
+                    span
+                      i.material-icons attach_money
+                      span=` ${item.price}/night`

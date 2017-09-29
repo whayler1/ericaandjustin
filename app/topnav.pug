@@ -1,4 +1,5 @@
 -
+  var title = htmlWebpackPlugin.options.title;
   var navItems = [
     {
       href: '/location',
@@ -8,7 +9,10 @@
       href: '/accomodations',
       title: 'Accomodations'
     }
-  ];
+  ].map(function(item) {
+    item.isSelected = title === item.title;
+    return item;
+  });
 header.header
   h1.title.vanity-font
     a(href="/") Erica &amp; Justin
@@ -16,4 +20,4 @@ header.header
     ul.header-nav-list
       each item in navItems
         li
-          a(href=item.href)= item.title
+          a(href=item.href class={'active': item.isSelected})= item.title

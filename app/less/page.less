@@ -9,14 +9,23 @@
 }
 
 .main {
-  max-width: @tablet-width;
-  padding: 0 @gutter;
-  margin: 0 auto;
   border-top: 1px solid #dfdfdf;
+  margin-bottom: 40px;
+
+  p {
+    color: @dovegrey;
+  }
 
   @media(min-width: @tablet-width) {
     margin-top: 130px;
+    margin-bottom: 80px;
   }
+}
+
+.container {
+  max-width: @tablet-width;
+  padding: 0 @gutter;
+  margin: 0 auto;
 }
 
 .bottom {
