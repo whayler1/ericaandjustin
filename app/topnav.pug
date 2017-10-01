@@ -14,10 +14,11 @@
     return item;
   });
 header.header
-  h1.title.vanity-font
-    a(href="/") Erica &amp; Justin
-  nav
-    ul.header-nav-list
-      each item in navItems
-        li
-          a(href=item.href class={'active': item.isSelected})= item.title
+  .header-content
+    h1.title.vanity-font
+      a(href="/") Erica &amp; Justin
+    nav
+      ul.header-nav-list
+        each item in navItems
+          li
+            a(href=item.href class={'active': item.isSelected})= item.title

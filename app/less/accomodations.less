@@ -16,7 +16,7 @@
   position: relative;
 }
 
-@accomodation-left-pad: 250px;
+@accomodation-left-pad: 300px;
 
 .accomodation-image {
   display: block;
@@ -25,10 +25,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: @gutter;
+  margin-left: -@gutter;
+  margin-right: -@gutter;
 
   @media(min-width: @tablet-width) {
     width: @accomodation-left-pad;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -67,9 +71,20 @@
     list-style: none;
     color: @dovegrey;
     vertical-align: middle;
+    position: relative;
+    padding-left: 30px;
+
+    .material-icons {
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
 
     +li {
       margin-top: @half-gutter;
+      @media(min-width: @tablet-width) {
+        margin-top: @quarter-gutter;
+      }
     }
 
     i,span {

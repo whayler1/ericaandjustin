@@ -13,10 +13,9 @@ block content
         address: '9075 S Dadeland Blvd, Miami, FL 33156',
         phone: '3056701220',
         phoneDisplay: '(305) 670-1220',
-        price: 232,
+        price: 202,
         linkDisplay: 'www.marriott.com',
         link: 'http://www.marriott.com/hotels/travel/miacy-courtyard-miami-dadeland/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2',
-        groupCode: 'RWW'
       },
       {
         title: "Hampton Inn Miami Dadeland",
@@ -33,8 +32,7 @@ block content
     ];
   main(role="main").main
     .container
-      h2.center Where to Stay
-      p.center For those coming from out-of-town we have reserved blocks at a few nearby hotels.
+      p.center For those coming from out-of-town we have reserved blocks at a few nearby hotels. Please be sure to tell them you would like to make your reservation with the Restum and Worsdale Wedding Block.
       ul.accomodations-list
         each item in accomodations
           li
@@ -60,3 +58,8 @@ block content
                     span
                       i.material-icons attach_money
                       span=` ${item.price}/night`
+                  if item.groupCode
+                    li
+                      span
+                        i.material-icons bookmark_border
+                        span=` Code: ${item.groupCode}`

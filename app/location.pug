@@ -5,6 +5,17 @@ block meta
 
 block content
   -
-    var img = require('./img/IMG_8234.jpg')
+    var img = require('./img/pond_003.jpg')
   main(role="main").main
-    h2 The house
+    .container-large
+      .location-img-wrap
+        .location-img-wrap-inner
+          img(src=img)
+      h2 The Ceremony
+      p The ceremony will take place at Mark and Elizabeth Worsdales house and garden in Miami, Florida. The location is particularly special because it is where Mark and Elizabeth were married, as well as the Grooms younger sister Simone.
+      p Learn more at 
+        a(href="http://www.worsdaletropicalgarden.com/") http://www.worsdaletropicalgarden.com/
+        | .
+      p 6750 S.W. 74th Street
+        br
+        | Miami, FL 33143
