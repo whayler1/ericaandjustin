@@ -1,18 +1,17 @@
 .home-main {
   position: relative;
   text-align: center;
-
-  // @media(min-width: @tablet-width) {
   height: 100vh;
-  min-height: 600px;
+  min-height: 350px;
   background: url(../img/IMG_0753b.jpg) center center no-repeat transparent;
   background-size: cover;
-  // }
+
+  @media(min-width: @tablet-width) {
+    min-height: 600px;
+  }
 }
 
 .main {
-  // border-top: 1px solid #dfdfdf;
-  // margin-top: @gutter;
   margin-bottom: 40px;
 
   p, a, h2 {
