@@ -110,6 +110,12 @@ module.exports = (env) => {
         filename: 'location/index.html',
         chunks: ['index']
       }),
+      new HtmlWebpackPlugin({
+        title: 'Proposal',
+        template: './app/story.pug',
+        filename: 'story/index.html',
+        chunks: ['index']
+      }),
       new FaviconsWebpackPlugin({
         title: 'Erica and Justin',
         logo: './app/img/favicon.png'
