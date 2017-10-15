@@ -32,7 +32,9 @@ block content
     ];
   main(role="main").main
     .container
-      p.center For those coming from out-of-town we have reserved blocks at a few nearby hotels. Please be sure to tell them you would like to make your reservation with the Worsdale Wedding Block.
+      .main-story-cube-container.center
+        img(src=require('./img/bed.svg'))
+      p.center(style="margin-top:40px") For those coming from out-of-town we have reserved blocks at a few nearby hotels. Please be sure to tell them you would like to make your reservation with the Worsdale Wedding Block.
       ul.accomodations-list
         each item in accomodations
           li
