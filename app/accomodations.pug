@@ -46,22 +46,15 @@ block content
                 ul.accomodation-info-list
                   li
                     a(href=item.mapLink target="_blank")
-                      i.material-icons location_on
                       span= ` ${item.address}`
                   li
                     a(href=item.link target="_blank")
-                      i.material-icons link
                       span=` ${item.linkDisplay}`
                   li
                     a(href=`tel:${item.phone}`)
-                      i.material-icons phone
                       span=` ${item.phoneDisplay}`
                   li
-                    span
-                      i.material-icons attach_money
-                      span=` ${item.price}/night`
+                    span=` ${item.price}/night`
                   if item.groupCode
                     li
-                      span
-                        i.material-icons bookmark_border
-                        span=` Code: ${item.groupCode}`
+                      span=` Code: ${item.groupCode}`
