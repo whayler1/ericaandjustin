@@ -7,17 +7,6 @@ block content
   -
     var accomodations = [
       {
-        title: "Courtyard by Marriott Miami Dadeland",
-        img: require('./img/marriot.jpg'),
-        mapLink: 'https://www.google.com/maps/place/Courtyard+by+Marriott+Miami+Dadeland/@25.6858524,-80.3143186,17z/data=!4m12!1m6!3m5!1s0x88d9c7a5cb1355eb:0x6fc10ab5431c3490!2sCourtyard+by+Marriott+Miami+Dadeland!8m2!3d25.686013!4d-80.314473!3m4!1s0x88d9c7a5cb1355eb:0x6fc10ab5431c3490!8m2!3d25.686013!4d-80.314473?hl=en-US',
-        address: '9075 S Dadeland Blvd, Miami, FL 33156',
-        phone: '3056701220',
-        phoneDisplay: '(305) 670-1220',
-        price: 179,
-        linkDisplay: 'www.marriott.com',
-        link: 'http://www.marriott.com/hotels/travel/miacy-courtyard-miami-dadeland/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2',
-      },
-      {
         title: "Hampton Inn Miami Dadeland",
         img: require('./img/hampton.jpg'),
         mapLink: 'https://www.google.com/maps?q=Hampton+Inn+Miami+Dadeland,+8200+SW+70th+Ave,+Miami,+FL+33143&ftid=0x88d9c7bd81355509:0xe712eddf28672fef&hl=en-US&gl=us&shorturl=1',
@@ -30,11 +19,38 @@ block content
         groupCode: 'RWW'
       }
     ];
+    var hotels = [
+      {
+        title: "Courtyard by Marriott Miami Dadeland",
+        img: require('./img/marriot.jpg'),
+        mapLink: 'https://www.google.com/maps/place/Courtyard+by+Marriott+Miami+Dadeland/@25.6858524,-80.3143186,17z/data=!4m12!1m6!3m5!1s0x88d9c7a5cb1355eb:0x6fc10ab5431c3490!2sCourtyard+by+Marriott+Miami+Dadeland!8m2!3d25.686013!4d-80.314473!3m4!1s0x88d9c7a5cb1355eb:0x6fc10ab5431c3490!8m2!3d25.686013!4d-80.314473?hl=en-US',
+        address: '9075 S Dadeland Blvd, Miami, FL 33156',
+        phone: '3056701220',
+        phoneDisplay: '(305) 670-1220',
+        price: 185,
+        linkDisplay: 'www.marriott.com',
+        link: 'http://www.marriott.com/hotels/travel/miacy-courtyard-miami-dadeland/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2',
+        distance: '1.7 miles / 5 min'
+      },
+      {
+        title: "The Biltmore Miami Coral Gables",
+        img: require('./img/biltmore.jpg'),
+        mapLink: 'https://www.google.com/maps/place/Miami+Biltmore+Hotel/@25.7408089,-80.2808726,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9b78fd0abe79f:0x24c6c1c7647dafe0!8m2!3d25.7408089!4d-80.2786786',
+        address: "1200 Anastasia Ave, Coral Gables, FL 33134",
+        phone: '8553116903',
+        phoneDisplay: '(855) 311-6903',
+        price: 383,
+        linkDisplay: 'www.biltmorehotel.com',
+        link: 'http://www.biltmorehotel.com/',
+        distance: '4.6 miles / 12 min'
+      }
+    ]
   main(role="main").main
     .container
       .main-story-cube-container.center
         img(src=require('./img/bed.svg'))
-      p.center(style="margin-top:40px") For those coming from out-of-town we have reserved blocks at a few nearby hotels. Please be sure to tell them you would like to make your reservation with the Worsdale Wedding Block.
+      h2.center.vanity-font Room Blocks
+      p.center For those coming from out-of-town we have reserved blocks at a few nearby hotels. Please be sure to tell them you would like to make your reservation with the Worsdale Wedding Block.
       ul.accomodations-list
         each item in accomodations
           li
@@ -54,7 +70,32 @@ block content
                     a(href=`tel:${item.phone}`)
                       span=` ${item.phoneDisplay}`
                   li
-                    span=` ${item.price}/night`
+                    span=` $${item.price}/night`
                   if item.groupCode
                     li
                       span=` Code: ${item.groupCode}`
+      h2.center.vanity-font(style="margin-top:60px") Local Hotels
+      p.center Below are a few nearby hotels. We were unable to reserve blocks at these hotels, but they will have availability and are near the ceremony.
+      ul.accomodations-list
+        each item in hotels
+          li
+            section.accomodation-section
+              a(href=item.link target="_blank").accomodation-image(style=`background-image:url(${item.img})`)
+              .accomodation-content
+                h1.accomodation-title
+                  a(href=item.link target="_blank")= item.title
+                ul.accomodation-info-list
+                  li
+                    a(href=item.mapLink target="_blank")
+                      span= ` ${item.address}`
+                  li
+                    span=` ${item.distance}`
+                  li
+                    a(href=item.link target="_blank")
+                      span=` ${item.linkDisplay}`
+                  li
+                    a(href=`tel:${item.phone}`)
+                      span=` ${item.phoneDisplay}`
+                  li
+                    span=` $${item.price}/night`
+                  
