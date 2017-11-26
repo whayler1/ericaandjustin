@@ -1,0 +1,43 @@
+@weddingparty-img-height: 200px;
+
+.weddingparty-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.weddingparty-list-section {
+  position: relative;
+  min-height: @weddingparty-img-height;
+}
+
+.weddingparty-list-section-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: @weddingparty-img-height;
+  height: @weddingparty-img-height;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+.weddingparty-list-section-content {
+  margin-left: @gutter + @weddingparty-img-height;
+}
+
+.weddingparty-list-section-name {
+  font-family: @vanity-font;
+  font-size: 24px;
+  margin: 0;
+  color: @blue-grey-700;
+}
+.weddingparty-list-section-title {
+  font-family: @vanity-font;
+  font-size: 24px !important;
+  margin: @half-gutter 0 0;
+  color: @blue-grey-400 !important;
+}
