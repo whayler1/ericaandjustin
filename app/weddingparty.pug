@@ -1,0 +1,65 @@
+extends base.pug
+  
+block meta
+  meta(name="description" content="Erica and Justins Wedding Party")
+
+block content
+  -
+    var persons = [
+      {
+        name: 'Ashley Grey',
+        blurb: 'Ashely and Erica have been friends since college and have collected many crazy stories and experiences. Having lived together for multiple years, their time together has consisted primarily of staying in bed and eating, watching bravo, decorating for the holidays and avoiding people.'
+      },
+      {
+        name: 'April Hafner',
+        blurb: 'April has been friends with Erica since she moved to Wisconsin in 7th grade. Through attempting to play softball, attending countless Hanson shows, and sleeping on the street for concert tickets, April has always been a trusted and hilarious friend.'
+      },
+      {
+        name: 'Christy Kingham',
+        blurb: 'Christy has been a constant support and shoulder to cry on from Erica’s first day of teaching. She is the consummate friend and her positivity kept Erica afloat through many challenging days at school. '
+      },
+      {
+        name: 'Laura Restum',
+        blurb: 'Laura is the best little sister Erica has ever had ;) Even though she spends their phone calls schooling Erica on her Instagram faux pas, giving her countless hours of one direction trivia and filling her Facebook feed with sorority photos, Laura is a best friend for life.'
+      },
+      {
+        name: 'Belle Restum',
+        blurb: '...is a dog.'
+      },
+      {
+        name: 'Michael Hensley',
+        blurb: ''
+      },
+      {
+        name: 'Steve Muntean',
+        blurb: ''
+      },
+      {
+        name: 'Simone Worsdale',
+        blurb: ''
+      },
+      {
+        name: 'Amanda Thompson',
+        blurb: ''
+      },
+      {
+        name: 'Melissa Maskevich',
+        blurb: ''
+      },
+      {
+        name: 'Andi Gonzales',
+        blurb: ''
+      }
+    ];
+  main(role="main").main
+    .container-large
+      .main-story-cube-container.center
+        img(src=require('./img/palm2.svg'))
+      h2.center.vanity-font.main-story-title Wedding Party
+      ul.weddingparty-list
+        each person in persons
+          li
+            section
+              h2= person.name
+              p= person.blurb
+        
