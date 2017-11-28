@@ -6,73 +6,101 @@ block meta
 block content
   -
     var belleimg = require('./img/belle.jpg');
-    var persons = [
-      {
-        name: 'Ashley Grey',
-        title: 'Maid of Honor',
-        blurb: 'Ashely and Erica have been friends since college and have collected many crazy stories and experiences. Having lived together for multiple years, their time together has consisted primarily of staying in bed and eating, watching bravo, decorating for the holidays and avoiding people.'
-      },
+    var brides = [
       {
         name: 'April Hafner',
-        title: 'Bridesmaid',
+        img: require('./img/april.jpg'),
+        title: 'Maid of Honor',
         blurb: 'April has been friends with Erica since she moved to Wisconsin in 7th grade. Through attempting to play softball, attending countless Hanson shows, and sleeping on the street for concert tickets, April has always been a trusted and hilarious friend.'
       },
       {
+        name: 'Ashley Grey',
+        img: require('./img/ashley.jpg'),
+        title: 'Bridesmaid',
+        blurb: 'Ashely and Erica have been friends since college and have collected many crazy stories and experiences. Having lived together for multiple years, their time together has consisted primarily of staying in bed and eating, watching bravo, decorating for the holidays and avoiding people.'
+      },
+      {
         name: 'Christy Kingham',
+        img: require('./img/christy.jpg'),
         title: 'Bridesmaid',
         blurb: 'Christy has been a constant support and shoulder to cry on from Erica’s first day of teaching. She is the consummate friend and her positivity kept Erica afloat through many challenging days at school. '
       },
       {
         name: 'Laura Restum',
+        img: require('./img/laura.jpg'),
         title: 'Bridesmaid/ Sister',
         blurb: 'Laura is the best little sister Erica has ever had ;) Even though she spends their phone calls schooling Erica on her Instagram faux pas, giving her countless hours of one direction trivia and filling her Facebook feed with sorority photos, Laura is a best friend for life.'
       },
       {
         name: 'Belle Restum',
         title: 'Bridesmaid',
-        blurb: '...is a dog.'
+        blurb: 'Belle has been a constant friend and companion for Erica for 9 years. They been through many life changes together including , countless apartments, job changes, and that one time they moved to Texas. Belle has helped Erica through many trying times and will continue to be an incredibly important part of Erica’s life.'
       },
       {
+        name: "Valerie Bellomo",
+        img: require('./img/valerie.jpg'),
+        title: 'Bridesmaid',
+        blurb: 'Valerie has been a confidant, partner in crime, and one Erica’s first true friends in New York. They have shared some truly amazing memories together and were always there for each other through our single days. Erica is so happy they came out on the other side together.'
+      }
+    ];
+    var grooms = [
+      {
         name: 'Michael Hensley',
+        img: require('./img/hensley.jpg'),
         title: 'Best Man',
-        blurb: 'Justin and Hensley became instant buds when they met through mutual friends/roommates in Brooklyn in 2004. They have attented many a dance party together spanning NYC, Miami, Mexico City, London and Montreal. Their love of all things minimal art, post-punk and going to the gym hungover has made Hensley a close friend and confidant through the years.'
+        blurb: 'Justin and Hensley became instant buds when they met through mutual friends/roommates in Brooklyn in 2004. They have attended many a dance party together spanning NYC, Miami, Mexico City, London and Montreal. Their love of all things minimal art, post-punk and going to the gym hungover has made Hensley a close friend and confidant through the years.'
       },
       {
         name: 'Steve Muntean',
+        img: require('./img/steve.jpg'),
         title: 'Groomsman',
         blurb: 'Justin and Steve had Science class together on the first period of the first day Justin attended highschool in downtown Miami. The two would later attend College together in Baltimore and end up moving to Brooklyn. Coincidentally they work a block away from eachother in Manhattan in present day as well. Steve is an incredibly caring and empathetic friend, though he tries to keep that on the downlow.'
       },
       {
         name: 'Simone Worsdale',
+        img: require('./img/simone.jpg'),
         title: 'Groomsmaid/ Sister',
-        blurb: 'Justin met Simone when she decided to be born and live in his house in 1985. Despite many years of sabotaging Justin\'s lego fortresses the two were able to become best friends in their adult life. Simone is a never ending wellspring of support, creativity and positivity.'
+        blurb: 'Justin met Simone when she decided to be born and live in his house in 1987. Despite many years of sabotaging Justin\'s lego fortresses the two were able to become best friends in their adult life. Simone and Justin constantly challenge and suppport eachother in evolving their careers and creative lives.'
       },
       {
         name: 'Amanda Thompson',
+        img: require('./img/amanda.jpg'),
         title: 'Groomsmaid',
-        blurb: 'Justin was randomly invited to Amandas house in Miami one day in the early 2000\'s. He remembered where it was and drove back the next day and said "I\'ve thought about this and I\'ve decided we\'re going to be best friends." Amanda invited him in and they proceeded to dish on all things Miami and their future aspirations. Things have not changed much since.'
+        blurb: 'Justin was randomly invited to Amandas house in Miami one day in the early 2000\'s. He remembered where it was and drove back the next day and said "I\'ve thought about this and I\'ve decided we should be best friends." Amanda invited him in and they proceeded to dish on all things Miami and their future aspirations. Things have not changed much since.'
       },
       {
         name: 'Melissa Maskevich',
+        img: require('./img/melissa.jpg'),
         title: 'Groomsmaid',
-        blurb: 'Melissa and Justin have been friends since going to Highschool together in Miami. Melissa was Justins first roommate in Brooklyn. '
+        blurb: 'Melissa and Justin have been friends since going to Highschool together in Miami. They quickly bonded over a desire to critique the student body and leave assemblies early, particularly dance recitals. After college they became roommates in Brooklyn where the tradition continued. Melissa always makes sure Justin is abreast of what restaurant/airline/hotel is better then the other one and Justin is forever grateful.'
       },
       {
         name: 'Andi Gonzales',
+        img: require('./img/andi.jpg'),
         title: 'Groomsmaid',
-        blurb: 'Andi and Justin met while working in a haunted house for charity in West Miami sometime in the early nineties. Andi shared a package of starbursts with Justin while he was feeling freaked out about the evil clown room next door. Over the years Andi has been an invaluable source of sartorial advice, an allie in tackling the insurmountable number of art shows, concerts and brunch spots, and a tried and true friend.'
+        blurb: 'Andi and Justin met while working in a haunted house for charity in West Miami sometime in the early nineties. Andi shared a package of starbursts with Justin while he was feeling freaked out about the evil clown room next door and a lifelong bond was forged. Over the years Andi has been an invaluable source of sartorial advice, a companion at an insurmountable number of art shows, concerts and restaurants, and a tried and true friend.'
       }
     ];
   main(role="main").main
     .container
       .main-story-cube-container.center
         img(src=require('./img/palm2.svg'))
-      h2.center.vanity-font.main-story-title Wedding Party
+      h2.center.vanity-font.main-story-title Brides Party
       ul.weddingparty-list
-        each person in persons
+        each person in brides
           li
             section.weddingparty-list-section
-              .weddingparty-list-section-img(style=`background-image:url(${belleimg})`)
+              .weddingparty-list-section-img(style=`background-image:url(${person.img || belleimg})`)
+              .weddingparty-list-section-content
+                h1.weddingparty-list-section-name= person.name
+                h2.weddingparty-list-section-title= person.title
+                p= person.blurb
+      h2.center.vanity-font.main-story-title(style="margin-top:40px;") Grooms Party
+      ul.weddingparty-list
+        each person in grooms
+          li
+            section.weddingparty-list-section
+              .weddingparty-list-section-img(style=`background-image:url(${person.img})`)
               .weddingparty-list-section-content
                 h1.weddingparty-list-section-name= person.name
                 h2.weddingparty-list-section-title= person.title
